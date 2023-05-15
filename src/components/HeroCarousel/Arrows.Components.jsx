@@ -1,7 +1,26 @@
 import React from "react";
 
-const Arrows = () => {
-  return <div>Arrows</div>;
-};
+export function NextArrow(props) {
+  return (
+    <>
+      <div
+        className={props.className}
+        style={{ ...props.style }}
+        // style={{ color: "red", padding: "10px" }}
+        onClick={props.onClick}
+      ></div>
+    </>
+  );
+}
 
-export default Arrows;
+export function PrevArrow(props) {
+  return (
+    <>
+      <div
+        className={props.className}
+        style={{ ...props.style }}
+        onClick={props.onClick}
+      ></div>
+    </>
+  );
+}
