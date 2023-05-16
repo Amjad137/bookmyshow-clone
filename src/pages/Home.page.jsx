@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import DefaultLayoutHoc from "../layout/Default.Layout";
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.Components";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Components";
-import EntertainmentCard from "../components/Entertainment/EntertainmentCard.Component";
+import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.Component";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HomePage = () => {
   const [recommendedMovies, setRecommendedMovies] = useState();
@@ -10,14 +13,14 @@ const HomePage = () => {
   const [onlineStreamEvents, setOnlineStreamEvents] = useState();
 
   return (
-    <div>
-      <HeroCarousel />
+    <>
+      {/* <HeroCarousel /> */}
 
-      <div className="container mx-auto px-4 md:px-12 my-8 ">
+      <div className="container mx-auto px-4 md:px-12 my-8">
         <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3">
-          The Best of Entertainment
+          The best of Entertainment
         </h1>
-        <EntertainmentCard />
+        <EntertainmentCardSlider />
       </div>
 
       <div className="container mx-auto px-4 md:px-12 my-8">
@@ -32,15 +35,15 @@ const HomePage = () => {
       <div className="bg-premier-800 py-12">
         <div className="container mx-auto px-4 md:px-12 my-8 flex-col gap-3">
           {/* <div className="lg:hidden md:flex "> */}
-          <div className="lg:hidden md:flex ">
-            <img src="" alt="" className="w-full h-full" />
-            <PosterSlider
-              title="Premiers"
-              subject="Brand New Releases Everyday "
-              posters={premierMovies}
-              isDark={true}
-            />
+          <div className="hidden md:flex ">
+            <img src="" alt="Rupay" className="w-full h-full" />
           </div>
+          <PosterSlider
+            title="Premiers"
+            subject="Brand New Releases Everyday "
+            posters={premierMovies}
+            isDark={true}
+          />
         </div>
       </div>
 
@@ -52,7 +55,7 @@ const HomePage = () => {
           isDark={false}
         />
       </div>
-    </div>
+    </>
   );
 };
 

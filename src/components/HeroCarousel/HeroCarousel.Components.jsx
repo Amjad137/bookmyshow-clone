@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { NextArrow, PrevArrow } from "./Arrows.Components";
+import HeroSlider from "react-slick";
+import { NextArrow, PrevArrow } from "./ArrowsAll.Components";
 
 const HeroCarousel = () => {
   const [images, setImages] = useState([
@@ -45,10 +46,10 @@ const HeroCarousel = () => {
     slidesToShow: 1,
     infinite: true,
     speed: 500,
-    slideToScroll: 1,
+    slidesToScroll: 1,
     slidesToShow: 3,
-    autoPlay: true,
-    autoPlaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -60,19 +61,19 @@ const HeroCarousel = () => {
     slidesToShow: 1,
     infinite: true,
     speed: 500,
-    slideToScroll: 1,
+    slidesToScroll: 1,
     slidesToShow: 3,
-    autoPlay: true,
-    autoPlaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     cssEase: "linear",
-    nextArrow: <nextArrow />,
-    prevArrow: <prevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
     <>
       <div className="lg:hidden">
-        <heroSlider {...settings}>
+        <HeroSlider {...settings}>
           {images.map((image) => {
             return (
               <div className="w-full h-56 md:h-80 py-3">
@@ -84,10 +85,10 @@ const HeroCarousel = () => {
               </div>
             );
           })}
-        </heroSlider>
+        </HeroSlider>
       </div>
       <div className="hidden lg:block">
-        <heroSlider {...settingLg}>
+        <HeroSlider {...settingLg}>
           {images.map((image) => {
             return (
               <div className="w-full h-96 px-2 py-3">
@@ -99,7 +100,7 @@ const HeroCarousel = () => {
               </div>
             );
           })}
-        </heroSlider>
+        </HeroSlider>
       </div>
     </>
   );
