@@ -2,12 +2,12 @@ import React from "react";
 import NavBar from "../components/NavBar/NavBar.Components";
 
 const DefaultLayoutHoc =
-  (Components) =>
-  (...props) => {
+  (Component) =>
+  ({ ...props }) => {
     return (
       <div>
         <NavBar />
-        <Components {...props} />
+        <Component {...props} />
         <div>Footer</div>
       </div>
     );

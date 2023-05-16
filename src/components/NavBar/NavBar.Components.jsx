@@ -1,5 +1,5 @@
 import React from "react";
-import { BiChevronDown, Bimenu, BiSearch } from "react-icons/bi";
+import { BiChevronDown, BiMenu, BiSearch } from "react-icons/bi";
 
 function NavSm() {
   return (
@@ -23,6 +23,9 @@ function NavSm() {
 function NavMd() {
   return (
     <>
+      <div className="w-10 h-10">
+        <img src="" alt="Logo" className="h-full w-full" />
+      </div>
       <div className="w-full flex items-center bg-white gap-3 px-3 py-1 rounded-md">
         <BiSearch />
         <input
@@ -57,10 +60,19 @@ function NavLg() {
 const NavBar = () => {
   return (
     <>
-      <div>NavBar</div>
-      <NavLg />
-      <NavMd />
-      <NavSm />
+      <nav className="bg-darkBackground-700 px-4 py-3">
+        <div className="md:hidden">
+          <NavSm />
+        </div>
+
+        <div className="hidden md:flex lg:hidden">
+          <NavMd />
+        </div>
+
+        <div className="hidden md:hidden lg:flex">
+          <NavLg />
+        </div>
+      </nav>
     </>
   );
 };
