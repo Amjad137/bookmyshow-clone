@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DefaultLayoutHoc from "../layout/Default.Layout";
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.Components";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Components";
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.Component";
+import axios from "axios";
 
 const HomePage = () => {
   const [recommendedMovies, setRecommendedMovies] = useState([]);
   const [premierMovies, setPremierMovies] = useState([]);
   const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
+
+  useEffect(() => {
+    const requestTopRatedMovies = async () => {
+      const getTopRatedMovies = await axios.get(
+        // "https://api.themoviedb.org/3/movie/top_rated?api_key=7eb855740b1f714c2d0e9eaef1040813"
+        "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=7eb855740b1f714c2d0e9eaef1040813"
+      );
+      setRecommendedMovies(getTopRatedMovies.data.results);
+    };
+    requestTopRatedMovies();
+  }, []);
 
   return (
     <>

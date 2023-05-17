@@ -5,7 +5,35 @@ import Poster from "../poster/Poster.Components";
 const PosterSlider = (props) => {
   const { title, subtitle, posters, isDark } = props;
 
-  const settings = {};
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToScroll: 3,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToScroll: 2,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -25,8 +53,8 @@ const PosterSlider = (props) => {
       </div>
 
       <Slider {...settings}>
-        {posters.map((each) => (
-          <Poster {...each} isDark={isDark} />
+        {posters.map((each, index) => (
+          <Poster {...each} isDark={isDark} key={index} />
         ))}
       </Slider>
     </>
