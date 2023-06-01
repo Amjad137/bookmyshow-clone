@@ -41,11 +41,15 @@ function NavLg() {
   return (
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
-        <div className="w-1/2 flex items-center gap-3"></div>
-        <div className="w-10 h-10">
-          <img src="" alt="Logo" className="w-full h-full" />
+        <div className="w-30 h-10 px-3">
+          <img
+            src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png"
+            alt="Logo"
+            className="w-full h-full rounded-md"
+          />
         </div>
-        <div className="w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md">
+
+        <div className="w-50 flex items-center gap-3 bg-white px-3 py-1 rounded-md">
           <BiSearch />
           <input
             type="search"
