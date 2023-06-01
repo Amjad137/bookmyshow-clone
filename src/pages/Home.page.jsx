@@ -21,6 +21,22 @@ const HomePage = () => {
     requestTopRatedMovies();
   }, []);
 
+  useEffect(() => {
+    const requestPopularMovies = async () => {
+      const getPopularMovies = await axios.get("/movie/popular");
+      setPremierMovies(getPopularMovies.data.results);
+    };
+    requestPopularMovies();
+  }, []);
+
+  useEffect(() => {
+    const requestStreamMovies = async () => {
+      const getStreamMovies = await axios.get("/movie/upcoming");
+      setOnlineStreamEvents(getStreamMovies.data.results);
+    };
+    requestStreamMovies();
+  }, []);
+
   return (
     <>
       <HeroCarousel />
