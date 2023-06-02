@@ -33,10 +33,12 @@ const EntertainmentCardSlider = () => {
   ];
 
   const settings = {
-    infinite: false,
+    infinite: true,
     slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,
+    autoplay: true,
+    autoplayspeed: 1000,
     responsive: [
       {
         breakpoint: 1024,
