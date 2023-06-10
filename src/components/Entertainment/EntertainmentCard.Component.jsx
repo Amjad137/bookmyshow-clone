@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const EntertainmentCard = (props) => {
   return (
-    <div>
+    <div className="mx-1">
       <img
         src={props.src}
         alt="entertainment"
@@ -50,7 +50,7 @@ const EntertainmentCardSlider = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 1,
         },
@@ -58,7 +58,7 @@ const EntertainmentCardSlider = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -71,6 +71,16 @@ const EntertainmentCardSlider = () => {
         <EntertainmentCard src={image} key={index} />
       ))}
     </Slider>
+
+    // <Slider {...settings}>
+    //   {EntertainmentImages.map((image) => {
+    //     return (
+    //       <div>
+    //         <img src={`${image}`} alt="" />
+    //       </div>
+    //     );
+    //   })}
+    // </Slider>
   );
 };
 

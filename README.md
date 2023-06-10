@@ -13,14 +13,18 @@ HOCs/Layouts:
 
 Components:
 
-> > Cast Cast.Component.jsx
+> > PosterSlider PosterSliderComponenet.jsx
+> > HeroCarousel HeroCarousel.Component.jsx & Arrows.Component.jsx
+> > Navbar Navbar.Componenet.jsx
 > > Entertainment EntertainmentCard.Component.jsx
-> > HeroCarousel HeroCarousel.Component.jsx Arrows.Component.jsx
-> > MovieHero MovieHero.Component.jsx MovieInfo.Component.jsx
-> > Navbar Navbar.Componenet.jsx MovieNavbar.Component.jsx
+
+> > MovieHero MovieHero.Component.jsx
+> > Poster Poster.Componenet.jsx
+> > MovieNavbar.Component.jsx
+> > MovieInfo.Component.jsx
+> > Cast Cast.Component.jsx
+
 > > PaymenModal PaymentComponent.jsx
 > > PlayFilters Filters.Componenet.jsx
-> > Poster Poster.Componenet.jsx
-> > PosterSlider PosterSliderComponenet.jsx
 
 npx create-react-app .

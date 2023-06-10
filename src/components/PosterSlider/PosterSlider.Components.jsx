@@ -54,6 +54,7 @@ const PosterSlider = (props) => {
         </p>
       </div>
 
+      {/* config is given to pass custom setting from outside */}
       {config && (
         <Slider {...config}>
           {posters.map((each, index) => (
