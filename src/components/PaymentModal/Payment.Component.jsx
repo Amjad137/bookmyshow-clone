@@ -1,16 +1,22 @@
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import Paypal from "../paypal/paypal.component";
 
 const PaymentModal = ({ setIsOpen, isOpen, price }) => {
+  let [myOpen, setMyOpen] = useState(false);
+
   function closeModal() {
     setIsOpen(false);
   }
 
-  const launchRazorPay = () => {};
+  const launchPaypal = () => {
+    setMyOpen(true);
+  };
 
   return (
     <>
+      <Paypal setIsOpen={setMyOpen} isOpen={myOpen} price={price} />
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -53,10 +59,11 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-800 focus-visible:ring-offset-2"
-                      onClick={launchRazorPay}
+                      onClick={launchPaypal}
                     >
-                      Pay $ {price}
+                      Pay {price}/-
                     </button>
+
                     <button
                       type="button"
                       className="ml-2 inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"

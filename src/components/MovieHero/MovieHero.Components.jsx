@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MovieContext } from "../../context/Movie.context";
 import MovieInfo from "./MovieInfo.Components";
 
 const MovieHero = () => {
   const { movie } = useContext(MovieContext);
+
   const genres = movie.genres?.map(({ name }) => name).join(", ");
 
   return (
@@ -28,7 +29,7 @@ const MovieHero = () => {
         </div>
         <div className="flex items-center gap-3 md:px-4 md:w-screen text-xl px-4">
           <button className="bg-red-500 w-full py-3 text-white font-semibold rounded-lg p-3">
-            249/-
+            149/-
           </button>
           <button className="bg-red-500 w-full py-3 text-white font-semibold rounded-lg p-10">
             999/-
@@ -38,7 +39,7 @@ const MovieHero = () => {
 
       {/* Large Screen */}
       <div
-        className="relative hidden w-full lg:block"
+        className="relative hidden w-full lg:block overflow-x-hidden"
         style={{ height: "28rem" }}
       >
         <div

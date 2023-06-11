@@ -13,48 +13,41 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex itmes-center">
               <Poster
                 isPlay={true}
-                src=""
-                title="So Rude of Me By Sweets"
+                src="https://lk-aps.bmscdn.com/Events/moviecard/karthik-live-in-colombo-et00004924-2023-5-10-t-13-20-57.jpg"
+                title="Karthik Live in Colombo"
                 subtitle="Comedy Shows | English, Tamil | 2hr 30 mins"
               />
             </div>
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex itmes-center">
               <Poster
                 isPlay={true}
-                src=""
-                title="So Rude of Me By Sweets"
+                src="https://lk-aps.bmscdn.com/Events/moviecard/krish-live-in-colombo-et00004951-2023-5-30-t-15-34-28.jpg"
+                title="Krish live in Colombo"
                 subtitle="Comedy Shows | English, Tamil | 2hr 30 mins"
               />
             </div>
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex itmes-center">
               <Poster
                 isPlay={true}
-                src=""
-                title="So Rude of Me By Sweets"
+                src="https://lk-aps.bmscdn.com/Events/moviecard/the-legend-hariharan-live-in-colombo-et00004944-2023-5-24-t-17-26-38.jpg"
+                title="Hariharan Musical Show"
                 subtitle="Comedy Shows | English, Tamil | 2hr 30 mins"
               />
             </div>
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex itmes-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-suhani-shah-kahaani-india-tour-0-2022-8-29-t-12-36-14.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Tamil | 2hr 30 mins"
               />
             </div>
+
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex itmes-center">
               <Poster
                 isPlay={true}
-                src=""
-                title="So Rude of Me By Sweets"
-                subtitle="Comedy Shows | English, Tamil | 2hr 30 mins"
-              />
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex itmes-center">
-              <Poster
-                isPlay={true}
-                src=""
-                title="So Rude of Me By Sweets"
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-daddy-kool-by-atul-khatri-0-2022-8-16-t-10-37-17.jpg"
+                title="Shaka Boom"
                 subtitle="Comedy Shows | English, Tamil | 2hr 30 mins"
               />
             </div>

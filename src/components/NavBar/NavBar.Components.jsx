@@ -42,9 +42,10 @@ function NavLg() {
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
         <div className="flex w-2/1 gap-3 items-center">
-          <div className="w-40 h-10 px-3 mr-10">
+          <div className="w-20 h-10 px-3 ">
             <img
-              src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png"
+              // src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png"
+              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
               alt="Logo"
               className="w-full h-full rounded-md"
             />

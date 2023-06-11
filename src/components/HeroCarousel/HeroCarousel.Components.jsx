@@ -39,6 +39,8 @@ const HeroCarousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: "50px",
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,

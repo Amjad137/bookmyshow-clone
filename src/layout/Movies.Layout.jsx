@@ -8,7 +8,20 @@ const MovieLayoutHoc =
       <div>
         <MovieNavBar />
         <Component {...props} />
-        <div>Footer</div>
+        <div>
+          <hr />
+          <h3 className=" text-center font-light ">
+            This is a Clone WebSite of{" "}
+            <a
+              href="https://lk.bookmyshow.com/sri-lanka"
+              target="_blank"
+              rel="noreferrer"
+              className="text-red-500"
+            >
+              BookMyShow
+            </a>
+          </h3>
+        </div>
       </div>
     );
   };
