@@ -1,6 +1,6 @@
 import React from "react";
 import { BiChevronDown, BiMenu, BiSearch } from "react-icons/bi";
-
+import { Link } from "react-router-dom";
 function NavSm() {
   return (
     <>
@@ -41,21 +41,41 @@ function NavLg() {
   return (
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
-        <div className="w-30 h-10 px-3">
-          <img
-            src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png"
-            alt="Logo"
-            className="w-full h-full rounded-md"
-          />
-        </div>
+        <div className="flex w-2/1 gap-3 items-center">
+          <div className="w-20 h-10 px-3 ">
+            <img
+              // src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png"
+              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+              alt="Logo"
+              className="w-full h-full rounded-md"
+            />
+          </div>
 
-        <div className="w-50 flex items-center gap-3 bg-white px-3 py-1 rounded-md">
-          <BiSearch />
-          <input
-            type="search"
-            className="w-full bg-transparent border-none focus:outline-none"
-            placeholder="Search for movies, events, plays, sports and activites"
-          />
+          <div className="w-full h-8 flex items-center gap-3 bg-white px-3 py-1 rounded-md">
+            <BiSearch />
+            <input
+              type="search"
+              className="w-full bg-transparent border-none focus:outline-none"
+              placeholder="Search for movies, events, plays, sports and activites"
+            />
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <Link to="/plays">
+            <span className="text-gray-400 text-base flex items-center cursor-pointer hover:text-white">
+              Plays
+            </span>
+          </Link>
+
+          <span className="text-gray-400 text-base flex items-center cursor-pointer hover:text-white">
+            Batticaloa <BiChevronDown />
+          </span>
+          <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
+            Sign In
+          </button>
+          <div className="w-8 h-8 text-white cursor-pointer">
+            <BiMenu className="w-full h-full" />
+          </div>
         </div>
       </div>
     </>

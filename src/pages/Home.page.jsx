@@ -59,8 +59,12 @@ const HomePage = () => {
 
       <div className="bg-premier-800 py-12">
         <div className="container mx-auto px-4 md:px-12 my-8 flex-col gap-3">
-          <div className="hidden md:flex ">
-            <img src="" alt="Rupay" className="w-full h-full" />
+          <div className="hidden md:flex w-40 h-10 place-items-end mb-10 ">
+            <img
+              src="https://www.paypalobjects.com/webstatic/mktg/logo/bdg_payments_by_pp_2line.png"
+              alt="PayPal"
+              className="w-full h-full rounded"
+            />
           </div>
           <PosterSlider
             title="Premiers"
