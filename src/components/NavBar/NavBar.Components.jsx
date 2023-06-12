@@ -4,16 +4,15 @@ import { Link } from "react-router-dom";
 function NavSm() {
   return (
     <>
-      <div className="text-white flex items-center justify-between">
+      <div className="text-white flex flex-row items-center justify-between ">
         <div>
           <h3 className="text-xl font-bold">It All Starts Here</h3>
           <span className="text-xs text-gray-400 flex items-center cursor-pointer hover:text-white">
             Batticaloa <BiChevronDown />
           </span>
         </div>
-        <div className="w-8 h-8">
+        <div className="w-8 h-8 flex flex-row">
           <button>Use App</button>
-          <BiSearch className="w-full h-full" />
         </div>
       </div>
     </>
