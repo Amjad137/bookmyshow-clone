@@ -56,6 +56,8 @@ const MoviePage = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    autoplay: true,
+    autoplayspeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -70,6 +72,8 @@ const MoviePage = () => {
           slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 0,
+          autoplay: true,
+          autoplayspeed: 2000,
         },
       },
       {
@@ -78,6 +82,8 @@ const MoviePage = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 0,
+          autoplay: true,
+          autoplayspeed: 2000,
         },
       },
     ],
