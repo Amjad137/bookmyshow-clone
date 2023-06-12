@@ -9,15 +9,17 @@ const MovieHero = () => {
 
   return (
     <>
-      <div className="lg:hidden w-full">
+      <div className="lg:hidden w-full md:flex flex-col">
         <img
           src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
           alt="Movie Poster"
-          className="m-4 rounded"
-          style={{ width: "calc(100 % -2rem)" }}
+          className="rounded "
+          style={{ width: "calc(100 % -5rem)" }}
         />
+
+        <MovieInfo heroMob={true} />
       </div>
-      <div className="flex flex-col lg:hidden gap-3">
+      {/* <div className="flex flex-col lg:hidden gap-3">
         <div className="flex flex-col-reverse gap-3 px-3 my-3 ">
           <div className="text-black flex flex-col gap-2 md:px-4">
             <h4>4.4k Rating</h4>
@@ -35,7 +37,7 @@ const MovieHero = () => {
             999/-
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Large Screen */}
       <div

@@ -101,7 +101,7 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          initialSlide: 1,
+          initialSlide: 0,
         },
       },
       {
@@ -109,7 +109,7 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 3,
+          initialSlide: 0,
         },
       },
     ],
